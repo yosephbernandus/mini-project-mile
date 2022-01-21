@@ -8,6 +8,7 @@ var cors = require('cors');
 // var indexRouter = require('./app/transactions/router');
 var locationRouter = require('./app/location/router');
 var customerRouter = require('./app/customer/router');
+var koliRouter = require('./app/koli/router');
 var transactionRouter = require('./app/transactions/router');
 
 const app = express();
@@ -25,10 +26,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', indexRouter);
+
 // api
 app.use(`${URL}/transactions`, transactionRouter);
 app.use(`${URL}/location`, locationRouter);
 app.use(`${URL}/customer`, customerRouter);
+app.use(`${URL}/koli`, koliRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
