@@ -6,6 +6,7 @@ router.get('/', index);
 router.post('/', createLocation);
 router.get('/detail/:id', detailLocation);
 router.put('/edit/:id', editLocation);
+router.patch('/edit/:id', editLocation);
 router.delete('/delete/:id', deleteLocation);
 
 

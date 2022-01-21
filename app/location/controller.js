@@ -47,7 +47,7 @@ module.exports = {
             if (!location) {
                 return res.status(404).json({ message: 'Location not found' });
             }
-            const new_location = await Location.findOneAndUpdate({_id: id}, {name, longitude, latitude});
+            const new_location = await Location.findOneAndUpdate({_id: id}, {name, longitude, latitude}, { new: true });
             res.status(201).json({ 
                 data: new_location,
                 message: 'Location updated'
