@@ -9,6 +9,7 @@ var cors = require('cors');
 var locationRouter = require('./app/location/router');
 var customerRouter = require('./app/customer/router');
 var koliRouter = require('./app/koli/router');
+var connoteRouter = require('./app/connote/router');
 var transactionRouter = require('./app/transactions/router');
 
 const app = express();
@@ -32,6 +33,7 @@ app.use(`${URL}/transactions`, transactionRouter);
 app.use(`${URL}/location`, locationRouter);
 app.use(`${URL}/customer`, customerRouter);
 app.use(`${URL}/koli`, koliRouter);
+app.use(`${URL}/connote`, connoteRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
