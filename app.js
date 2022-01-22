@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 
 // api
-app.use(`${URL}/transactions`, transactionRouter);
+app.use(`${URL}/transaction`, transactionRouter);
 app.use(`${URL}/location`, locationRouter);
 app.use(`${URL}/customer`, customerRouter);
 app.use(`${URL}/koli`, koliRouter);
