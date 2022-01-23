@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "dev": "env-cmd -f ./.env.local nodemon ./bin/www",
     "prod": "env-cmd -f ./.env nodemon ./bin/www",
-    "test": "env-cmd -f ./.env.test jest --watchAll"
+    "test": "env-cmd -f ./.env.test jest ----detectOpenHandles",
+    "watch": "env-cmd -f ./.env.test jest --watchAll"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

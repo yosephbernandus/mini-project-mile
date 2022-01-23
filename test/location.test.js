@@ -87,3 +87,13 @@ describe("location.js", () => {
         expect(response.body.message).toBe('Location delete')
     })
 })
+
+
+afterAll(done => {
+    // Closing the DB connection allows Jest to exit successfully.
+    mongoose.connection.close()
+    done()
+})
+
+
+// "test": "env-cmd -f ./.env.test jest ----forceExit",
